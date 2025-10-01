@@ -7,7 +7,10 @@ import androidx.work.Configuration
 import androidx.work.ListenableWorker
 import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
-import app.vercel.danfelogarporfolios.ktworkmanagertasks.expeditedWork.CustomWorker
+//RepeatableWork
+import app.vercel.danfelogarporfolios.ktworkmanagertasks.repeatableWork.RepeatableCustomWorker
+// RepeatableWork
+//import app.vercel.danfelogarporfolios.ktworkmanagertasks.expeditedWork.CustomWorker
 // workManagerDemo
 //import app.vercel.danfelogarporfolios.ktworkmanagertasks.workManagerDemo.CustomWorker
 
@@ -35,11 +38,20 @@ class CustomWorkerFactory @Inject constructor(private val api: DemoApi): WorkerF
 //        workerParameters: WorkerParameters
 //    ): ListenableWorker = CustomWorker(api, appContext, workerParameters)
     //ExpeditedWork
+//    override fun createWorker(
+//        appContext: Context,
+//        workerClassName: String,
+//        workerParameters: WorkerParameters
+//    ): ListenableWorker? = CustomWorker(
+//        appContext,
+//        workerParameters
+//    )
+    //RepeatableWork
     override fun createWorker(
         appContext: Context,
         workerClassName: String,
         workerParameters: WorkerParameters
-    ): ListenableWorker? = CustomWorker(
+    ): ListenableWorker? = RepeatableCustomWorker(
         appContext,
         workerParameters
     )
