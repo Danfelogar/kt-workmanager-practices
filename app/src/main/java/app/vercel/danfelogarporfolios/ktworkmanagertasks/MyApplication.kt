@@ -7,7 +7,10 @@ import androidx.work.Configuration
 import androidx.work.ListenableWorker
 import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
-import app.vercel.danfelogarporfolios.ktworkmanagertasks.workManagerDemo.CustomWorker
+import app.vercel.danfelogarporfolios.ktworkmanagertasks.expeditedWork.CustomWorker
+// workManagerDemo
+//import app.vercel.danfelogarporfolios.ktworkmanagertasks.workManagerDemo.CustomWorker
+
 import app.vercel.danfelogarporfolios.ktworkmanagertasks.workManagerDemo.DemoApi
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
@@ -25,9 +28,19 @@ class MyApplication: Application(), Configuration.Provider {
 }
 
 class CustomWorkerFactory @Inject constructor(private val api: DemoApi): WorkerFactory() {
+    //workManagerDemo
+//    override fun createWorker(
+//        appContext: Context,
+//        workerClassName: String,
+//        workerParameters: WorkerParameters
+//    ): ListenableWorker = CustomWorker(api, appContext, workerParameters)
+    //ExpeditedWork
     override fun createWorker(
         appContext: Context,
         workerClassName: String,
         workerParameters: WorkerParameters
-    ): ListenableWorker = CustomWorker(api, appContext, workerParameters)
+    ): ListenableWorker? = CustomWorker(
+        appContext,
+        workerParameters
+    )
 }

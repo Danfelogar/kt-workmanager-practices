@@ -70,6 +70,8 @@ dependencies {
     //retrofit
     implementation(libs.retrofit2.retrofit)
     implementation(libs.converter.gson)
+    //accompanist-permissions
+    implementation(libs.accompanist.permissions)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
