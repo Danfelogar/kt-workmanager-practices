@@ -1,5 +1,8 @@
 package app.vercel.danfelogarporfolios.ktworkmanagertasks.ultimateGuide
 
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
 import android.util.Log
@@ -131,7 +134,7 @@ class DownloadWorker(
         }
     }
 
-    private fun createNotification(): android.app.Notification {
+    private fun createNotification(): Notification {
         val channelId = "download_channel"
         val channelName = "File Download"
 
@@ -142,13 +145,13 @@ class DownloadWorker(
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setOngoing(true)
 
-        val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as android.app.NotificationManager
+        val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channel = android.app.NotificationChannel(
+            val channel = NotificationChannel(
                 channelId,
                 channelName,
-                android.app.NotificationManager.IMPORTANCE_HIGH
+                NotificationManager.IMPORTANCE_HIGH
             )
             notificationManager.createNotificationChannel(channel)
         }
