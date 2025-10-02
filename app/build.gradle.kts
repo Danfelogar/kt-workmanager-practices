@@ -72,6 +72,19 @@ dependencies {
     implementation(libs.converter.gson)
     //accompanist-permissions
     implementation(libs.accompanist.permissions)
+    //lifecycle and viewmodel
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.lifecycle.viewmodel.compose)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.lifecycle.runtime.compose)
+    implementation(libs.lifecycle.viewmodel.savedstate)
+    ksp(libs.lifecycle.compiler)
+    //runtime
+    implementation(libs.runtime)
+    implementation(libs.runtime.livedata)
+    //coil
+    implementation(libs.coil.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -18,7 +18,7 @@ import app.vercel.danfelogarporfolios.ktworkmanagertasks.workManagerDemo.DemoApi
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
-@HiltAndroidApp
+//@HiltAndroidApp
 class MyApplication: Application(), Configuration.Provider {
     @Inject lateinit var workerFactory: CustomWorkerFactory
 
