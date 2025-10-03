@@ -85,6 +85,12 @@ dependencies {
     implementation(libs.runtime.livedata)
     //coil
     implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+    //room-db
+    implementation(libs.androidx.room.db)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

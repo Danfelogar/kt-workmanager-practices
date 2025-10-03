@@ -29,6 +29,7 @@ import androidx.work.WorkManager
 import app.vercel.danfelogarporfolios.ktworkmanagertasks.expeditedWork.CustomWorker
 // RepeatableWork
 import app.vercel.danfelogarporfolios.ktworkmanagertasks.repeatableWork.RepeatableCustomWorker
+import app.vercel.danfelogarporfolios.ktworkmanagertasks.rickandmortyapiWork.ui.CharacterListScreen
 import app.vercel.danfelogarporfolios.ktworkmanagertasks.ui.theme.KTWorkManagerTasksTheme
 import app.vercel.danfelogarporfolios.ktworkmanagertasks.ultimateGuide.MultipleWorkersScreen
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
@@ -64,11 +65,16 @@ class MainActivity : ComponentActivity() {
 //                            .padding(innerPadding),
 //                        applicationContext = applicationContext,
 //                    )
-                    MultipleWorkersScreen(
+//                    MultipleWorkersScreen(
+//                        modifier = Modifier
+//                            .fillMaxSize()
+//                            .padding(innerPadding),
+//                        applicationContext = applicationContext,
+//                    )
+                    CharacterListScreen(
                         modifier = Modifier
                             .fillMaxSize()
                             .padding(innerPadding),
-                        applicationContext = applicationContext,
                     )
                 }
             }

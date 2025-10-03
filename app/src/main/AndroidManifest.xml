@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
@@ -10,7 +11,7 @@
 <!--    android:name=".MYApplication"-->
     <application
         android:allowBackup="true"
-        android:name=".DownloadApplication"
+        android:name=".rickandmortyapiWork.RickAndMortyApiApplication"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -35,6 +36,8 @@
 <!--            android:name="androidx.startup.InitializationProvider"-->
 <!--            android:authorities="${applicationId}.androidx-startup"-->
 <!--            tools:node="remove"/>-->
+        <!-- Remove ALL WorkManager initializers -->
+
 
         <service
             android:name="androidx.work.impl.foreground.SystemForegroundService"

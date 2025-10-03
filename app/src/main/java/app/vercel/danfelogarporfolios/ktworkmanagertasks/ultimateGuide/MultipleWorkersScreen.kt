@@ -27,8 +27,8 @@ import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import coil.ImageLoader
-import coil.compose.AsyncImage
+import coil3.compose.AsyncImage
+
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberPermissionState
@@ -110,7 +110,6 @@ fun MultipleWorkersScreen(
 
                 AsyncImage(
                     model = file,
-                    imageLoader = ImageLoader.Builder(LocalContext.current).build(),
                     contentDescription = "Processed image",
                     modifier = Modifier
                         .fillMaxWidth(0.8f)

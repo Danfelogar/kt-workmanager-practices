@@ -8,4 +8,6 @@ plugins {
     alias(libs.plugins.ksp) apply false
     // hilt
     alias(libs.plugins.hilt) apply false
+    // room-db
+    alias(libs.plugins.room) apply false
 }
